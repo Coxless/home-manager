@@ -51,6 +51,13 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  programs.bash = {
+    enable = true;
+    initExtra = ''
+      eval "$(~/.local/bin/mise activate bash)"
+    '';
+  };
+
   # Enable Git and set user information
   programs.git = {
     enable = true;
