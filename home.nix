@@ -61,6 +61,7 @@
       init.defaultBranch = "main";
       pull.rebase = true;
       credential.helper = "manager";
+      credential.credentialStore = "cache";
     };
   };
 }
