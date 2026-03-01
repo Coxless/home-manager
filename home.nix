@@ -45,8 +45,6 @@
   #  /etc/profiles/per-user/wslUser/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    LANG = "C.UTF-8";
-    LC_ALL = "C.UTF-8";
   };
 
   # Let Home Manager install and manage itself.
