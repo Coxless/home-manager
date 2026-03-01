@@ -45,7 +45,8 @@
   #  /etc/profiles/per-user/wslUser/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    LANG = "C.UTF-8";
+    LC_ALL = "C.UTF-8";
   };
 
   # Let Home Manager install and manage itself.
@@ -54,7 +55,7 @@
   programs.bash = {
     enable = true;
     initExtra = ''
-      eval "$(~/.local/bin/mise activate bash)"
+      eval "$(${pkgs.mise}/bin/mise activate bash)"
     '';
   };
 
