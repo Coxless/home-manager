@@ -57,6 +57,11 @@
     '';
   };
 
+  programs.starship = {
+    enable = true;
+    enableBashIntegration = true;
+  };
+
   # Enable Git and set user information
   programs.git = {
     enable = true;
