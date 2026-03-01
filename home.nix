@@ -9,8 +9,8 @@
   home.packages = [
     pkgs.git
     pkgs.gh
-    pkgs.zellij
-    pkgs.lazygit
+    pkgs.curl
+    pkgs.git-credential-manager
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -50,7 +50,7 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-  
+
   # Enable Git and set user information
   programs.git = {
     enable = true;
@@ -60,6 +60,7 @@
       user.email = "201592128+Coxless@users.noreply.github.com";
       init.defaultBranch = "main";
       pull.rebase = true;
+      credential.helper = "manager";
     };
   };
 }
