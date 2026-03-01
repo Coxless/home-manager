@@ -10,7 +10,6 @@
     pkgs.git
     pkgs.gh
     pkgs.curl
-    pkgs.git-credential-manager
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -60,8 +59,7 @@
       user.email = "201592128+Coxless@users.noreply.github.com";
       init.defaultBranch = "main";
       pull.rebase = true;
-      credential.helper = "manager";
-      credential.credentialStore = "cache";
+      credential.helper = "!gh auth git-credential";
     };
   };
 }
