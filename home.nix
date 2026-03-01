@@ -10,6 +10,7 @@
     pkgs.git
     pkgs.gh
     pkgs.curl
+    pkgs.mise
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
